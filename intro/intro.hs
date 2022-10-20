@@ -2,7 +2,8 @@ succ n = n + 1
 
 square x = x * x
 
-fact n = product [1..n]
+fact n | n == 0 = 1
+       | n > 0 = n * fact (n-1)
 
 isEven n = n `mod` 2 == 0
 
